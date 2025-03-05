@@ -284,13 +284,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v5_0
+      name: wall_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 47
-        width: 147
-        height: 209
+        x: 64
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1559,6 +1559,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: floor_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60dc661407b5d9c45ae7cfb51e03327d
+      internalID: 1812654790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1573,7 +1595,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      0x72_16x16DungeonTileset.v5_0: -4032449147605997190
       0x72_16x16DungeonTileset.v5_1: 4840290972086889215
       0x72_16x16DungeonTileset.v5_10: 7280512214869645652
       0x72_16x16DungeonTileset.v5_11: 2631768738938801831
@@ -1629,8 +1650,10 @@ TextureImporter:
       0x72_16x16DungeonTileset.v5_7: 6372405238226718235
       0x72_16x16DungeonTileset.v5_8: 5940745270654208327
       0x72_16x16DungeonTileset.v5_9: -8636704302542761895
+      floor_0: 1812654790
       player_0: -284083276206249529
       player_1: 3910368631869222354
+      wall_0: -4032449147605997190
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
