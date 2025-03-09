@@ -45,6 +45,5 @@ public class Player : MonoBehaviour {
             //Move
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
         }
-        Debug.Log(hit.collider);
     }
 }
