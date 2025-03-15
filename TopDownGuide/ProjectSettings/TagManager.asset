@@ -50,5 +50,8 @@ TagManager:
   - name: Interactable
     uniqueID: 590269341
     locked: 0
+  - name: Weapon
+    uniqueID: 2163775973
+    locked: 0
   m_RenderingLayers:
   - Default
