@@ -20,6 +20,11 @@ public abstract class Mover : Fighter {
             transform.localScale = Vector3.one;
         else if(moveDelta.x < 0)
             transform.localScale = new Vector3(-1, 1, 1);
+
+        // Add a push vector, if any
+        moveDelta += pushDirection;
+        //Reduce push force every frame, based off recovery speed
+        pushDirection = Vector3.Lerp(pushDirection, Vector3.zero, pushRecoverySpeed);
         
         //Make sure we can move into this direction by casting a box first, if the box return null, we're free to move
         hit = Physics2D.BoxCast(transform.position, 
