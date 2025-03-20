@@ -1656,7 +1656,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1665,6 +1665,28 @@ TextureImporter:
       bones: []
       spriteID: cf32c25c513c47e4bb733b3ab6f1615c
       internalID: -1844493747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu_0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546ca0ef545130d4181c46122c23f8c2
+      internalID: -1932952269
       vertices: []
       indices: 
       edges: []
@@ -1761,6 +1783,7 @@ TextureImporter:
       healingFountain_0: -1724994396
       healingFountain_1: -642965659
       healingFountain_2: 927715620
+      menu_0: -1932952269
       pillar_0: 1552147930
       pillar_1: -1993161101
       pillar_2: 1210991589
