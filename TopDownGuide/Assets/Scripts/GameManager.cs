@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
 
     //Ressources
     public List<Sprite> playerSprite;
-    public List<Sprite> weaponSprite;
+    public List<Sprite> weaponSprites;
     public List<int> weaponPrices;
     public List<int> xpTable;
 

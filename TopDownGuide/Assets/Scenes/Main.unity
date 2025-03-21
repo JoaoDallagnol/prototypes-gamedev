@@ -1937,6 +1937,18 @@ MonoBehaviour:
           m_StringArgument: show
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1583875427}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: UpdateMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &202902503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3239,7 +3251,7 @@ GameObject:
   - component: {fileID: 947623829}
   - component: {fileID: 947623828}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: XpText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12475,6 +12487,7 @@ GameObject:
   - component: {fileID: 1583875421}
   - component: {fileID: 1583875425}
   - component: {fileID: 1583875426}
+  - component: {fileID: 1583875427}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -12600,6 +12613,26 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1583875427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583875420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66cd6e3f8cc05744eafbffec403d8c76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelText: {fileID: 1520019836}
+  hitpointText: {fileID: 1630240869}
+  pesosText: {fileID: 824247823}
+  upgradeCostText: {fileID: 35495601}
+  xpText: {fileID: 947623828}
+  characterSelectionSprite: {fileID: 1631173667}
+  weaponSprite: {fileID: 1731782977}
+  xpBar: {fileID: 2100295400}
 --- !u!1 &1630240867
 GameObject:
   m_ObjectHideFlags: 0
@@ -14769,10 +14802,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSprite: []
-  weaponSprite: []
+  weaponSprites:
+  - {fileID: -822440667, guid: 4bc8389360ed87a4bb66c458f45bd1dd, type: 3}
+  - {fileID: -1671454372, guid: 4bc8389360ed87a4bb66c458f45bd1dd, type: 3}
+  - {fileID: -1942785780, guid: 4bc8389360ed87a4bb66c458f45bd1dd, type: 3}
+  - {fileID: -1300663986, guid: 4bc8389360ed87a4bb66c458f45bd1dd, type: 3}
+  - {fileID: -2008802980, guid: 4bc8389360ed87a4bb66c458f45bd1dd, type: 3}
+  - {fileID: 1252913019, guid: 4bc8389360ed87a4bb66c458f45bd1dd, type: 3}
+  - {fileID: -1413830264, guid: 4bc8389360ed87a4bb66c458f45bd1dd, type: 3}
+  - {fileID: -697408796, guid: 4bc8389360ed87a4bb66c458f45bd1dd, type: 3}
   weaponPrices: 
   xpTable: 
-  player: {fileID: 5972191272203527815}
+  player: {fileID: 5972191272203527816}
   floatingTextManager: {fileID: 30435144}
   pesos: 0
   experience: 0
@@ -15066,9 +15107,9 @@ PrefabInstance:
       addedObject: {fileID: 429974675}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd24a40e19e7f874fba7fc2bb55cbafa, type: 3}
---- !u!114 &5972191272203527815 stripped
+--- !u!114 &5972191272203527816 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8863789558483840960, guid: dd24a40e19e7f874fba7fc2bb55cbafa, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5956610661097182380, guid: dd24a40e19e7f874fba7fc2bb55cbafa, type: 3}
   m_PrefabInstance: {fileID: 5972191272203527814}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
