@@ -14800,7 +14800,7 @@ MonoBehaviour:
   hitPoint: 3
   maxHitPoint: 3
   pushRecoverySpeed: 0.2
-  xpValue: 1
+  xpValue: 10
   triggerLenght: 0.3
   chaseLenght: 1
   filter:
@@ -14859,7 +14859,7 @@ MonoBehaviour:
   - {fileID: -1413830264, guid: 4bc8389360ed87a4bb66c458f45bd1dd, type: 3}
   - {fileID: -697408796, guid: 4bc8389360ed87a4bb66c458f45bd1dd, type: 3}
   weaponPrices: 050000001e0000004600000082000000c80000001301000090010000
-  xpTable: 
+  xpTable: 050000000a00000011000000190000001e0000002800000037000000460000005a00000078000000
   player: {fileID: 5972191272203527816}
   weapon: {fileID: 429974677}
   floatingTextManager: {fileID: 30435144}
