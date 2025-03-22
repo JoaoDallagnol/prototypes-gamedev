@@ -63,6 +63,9 @@ public class GameManager : MonoBehaviour {
 
         // Change the weapon level
         weapon.SetWeaponLevel(int.Parse(data[3]));
+
+        //Spawn the player
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
 
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration) {
