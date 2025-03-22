@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraMotor : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public Transform lookAt;
+    private Transform lookAt;
     public float boundX = 0.3f;
     public float boundY = 0.15f;
 
