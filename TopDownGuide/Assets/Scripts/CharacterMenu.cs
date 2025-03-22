@@ -38,6 +38,7 @@ public class CharacterMenu : MonoBehaviour {
 
     private void OnSelectionChanged() {
         characterSelectionSprite.sprite = GameManager.instance.playerSprite[currentCharacterSelection];
+        GameManager.instance.player.SwapSprite(currentCharacterSelection);
     }
 
 
