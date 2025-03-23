@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour {
     public RectTransform hitPointBar;
     public GameObject hud;
     public GameObject menu;
+    public Animator deathMenuAnim;
 
     // Logic
     public int pesos;
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour {
             return;
         }
 
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
 
         instance = this;
         SceneManager.sceneLoaded += LoadState;
@@ -146,5 +147,12 @@ public class GameManager : MonoBehaviour {
     public void OnLevelUp() {
         player.OnLevelUp();
         OnHitpointChange();
+    }
+
+    // Death Menu and Respawn
+    public void Respawn() {
+        deathMenuAnim.SetTrigger("Hide");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+        player.Respawn();
     }
 }
