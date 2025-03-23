@@ -3078,7 +3078,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  message: Welcome to the Dungeon!! Be aware of the boss!
+  message: Welcome to the Dungeon!!
 --- !u!1 &738284517
 GameObject:
   m_ObjectHideFlags: 0
@@ -15197,11 +15197,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8333503981315881514, guid: c6a69d696962a954eb21d5b8510e4039, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.418
+      value: -0.691
       objectReference: {fileID: 0}
     - target: {fileID: 8333503981315881514, guid: c6a69d696962a954eb21d5b8510e4039, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.111
+      value: -0.021
       objectReference: {fileID: 0}
     - target: {fileID: 8333503981315881514, guid: c6a69d696962a954eb21d5b8510e4039, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15427,6 +15427,10 @@ PrefabInstance:
     - target: {fileID: 2139352271063774335, guid: 7fb302b065d4b9a4d85e9fd40aa13726, type: 3}
       propertyPath: m_Name
       value: Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115492752623551663, guid: 7fb302b065d4b9a4d85e9fd40aa13726, type: 3}
+      propertyPath: pesosAmount
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 5827495625817076949, guid: 7fb302b065d4b9a4d85e9fd40aa13726, type: 3}
       propertyPath: m_LocalPosition.x
