@@ -7,10 +7,6 @@ public class FloatingTextManager : MonoBehaviour {
     public GameObject textPrefab;
     private List<FloatingText> floatingTexts = new List<FloatingText>();
 
-    private void Start() {
-        DontDestroyOnLoad(gameObject);    
-    }
-
     private FloatingText GetFloatingText() {
         FloatingText txt = floatingTexts.Find(t => !t.active);
 

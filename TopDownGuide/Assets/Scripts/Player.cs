@@ -7,10 +7,13 @@ public class Player : Mover {
         base.Start();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        DontDestroyOnLoad(gameObject);
-
         xSpeed = 1.5f;
         ySpeed = 1.5f;
+    }
+
+    protected override void ReceiveDamage(Damage dmg) {
+        base.ReceiveDamage(dmg);
+        GameManager.instance.OnHitpointChange();
     }
     private void FixedUpdate() {
         float x = Input.GetAxisRaw("Horizontal");
@@ -26,6 +29,7 @@ public class Player : Mover {
     public void OnLevelUp() {
         maxHitPoint++;
         hitPoint = maxHitPoint;
+        GameManager.instance.ShowText("LEVEL UP!!", 25, Color.magenta, transform.position, Vector3.up * 25, 1.5f);
     }
 
     public void SetLevel(int level) {
@@ -45,5 +49,6 @@ public class Player : Mover {
         }
 
         GameManager.instance.ShowText("+" + healingAmount.ToString() + "hp", 25, Color.green, transform.position, Vector3.up * 30, 1.0f);
+        GameManager.instance.OnHitpointChange();
     }
 }

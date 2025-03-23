@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour {
     public Player player;
     public Weapon weapon;
     public FloatingTextManager floatingTextManager;
+    public RectTransform hitPointBar;
+    public GameObject hud;
+    public GameObject menu;
 
     // Logic
     public int pesos;
@@ -27,6 +30,8 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
             Destroy(player.gameObject);
             Destroy(floatingTextManager.gameObject);
+            Destroy(hud);
+            Destroy(menu);
             return;
         }
 
@@ -34,7 +39,7 @@ public class GameManager : MonoBehaviour {
 
         instance = this;
         SceneManager.sceneLoaded += LoadState;
-        DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public void SaveState() {
@@ -48,6 +53,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void LoadState(Scene s, LoadSceneMode mode) {
+        SceneManager.sceneLoaded -= LoadState;
 
         if (!PlayerPrefs.HasKey("SaveState")){
             return;
@@ -65,7 +71,10 @@ public class GameManager : MonoBehaviour {
 
         // Change the weapon level
         weapon.SetWeaponLevel(int.Parse(data[3]));
+    }
 
+    //On Scene Loaded
+    public void OnSceneLoaded(Scene s, LoadSceneMode mode) {
         //Spawn the player
         player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
@@ -88,6 +97,12 @@ public class GameManager : MonoBehaviour {
         }
 
         return false;
+    }
+
+    // Hitpoint Bar
+    public void OnHitpointChange() {
+        float ration = (float)player.hitPoint / (float)player.maxHitPoint;
+        hitPointBar.localScale = new Vector3(1, ration, 1);
     }
 
     // Experience System
@@ -130,5 +145,6 @@ public class GameManager : MonoBehaviour {
 
     public void OnLevelUp() {
         player.OnLevelUp();
+        OnHitpointChange();
     }
 }
