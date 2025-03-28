@@ -5,6 +5,9 @@ public class Sword : MonoBehaviour {
     private Animator myAnimator;
     private PlayerController playerController;
     private ActiveWeapon activeWeapon;
+    [SerializeField] private GameObject slashAnim;
+    [SerializeField] private Transform slashAnimSpawnPoint;
+    private GameObject slashAttackAnim;
 
     private void Awake() {
         playerController =  GetComponentInParent<PlayerController>();
@@ -27,8 +30,26 @@ public class Sword : MonoBehaviour {
 
     private void Attack() {
         // fire our sword animation
-        
         myAnimator.SetTrigger("Attack");
+
+        slashAttackAnim = Instantiate(slashAnim, slashAnimSpawnPoint.position, Quaternion.identity);
+        slashAttackAnim.transform.parent = transform.parent;
+    }
+
+    public void SwingUpFlipAnim() {
+        slashAttackAnim.gameObject.transform.rotation = Quaternion.Euler(-180, 0, 0);
+    
+        if (playerController.FacingLeft) {
+            slashAttackAnim.GetComponent<SpriteRenderer>().flipX = true;
+        }
+    }
+
+    public void SwingDownFlipAnim() {
+        slashAttackAnim.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+    
+        if (playerController.FacingLeft) {
+            slashAttackAnim.GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 
     private void MouseFollowWithOffSet() {

@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D rb;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRender;
+    private bool facingLeft = false;
+    public bool FacingLeft { get { return facingLeft; } set { facingLeft = value; }}
 
     private void Awake() {
         playerControls = new PlayerControls();
@@ -48,8 +50,10 @@ public class PlayerController : MonoBehaviour {
 
         if (mousePos.x < playerScreenPoint.x) {
             mySpriteRender.flipX = true;
+            FacingLeft = true;
         } else {
             mySpriteRender.flipX = false;
+            FacingLeft = false;
         }
     }
 }
