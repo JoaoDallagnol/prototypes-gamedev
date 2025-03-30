@@ -1500,6 +1500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c932a18711b2c24b8833257e700ff91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageAmount: 1
 --- !u!1001 &1609443325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2096,6 +2097,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 8761525231198082817, guid: c2be100f45d91a3409f84c57fffef700, type: 3}
+      propertyPath: whiteFlashMat
+      value: 
+      objectReference: {fileID: 2100000, guid: ec3fb4204c22ca64b95e4e8ddc962a85, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
