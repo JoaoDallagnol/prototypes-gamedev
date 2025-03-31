@@ -1,7 +1,9 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemyIA : MonoBehaviour {
+public class EnemyAI : MonoBehaviour {
+
+    [SerializeField] private float roamChangeDirFloat = 2f;
     private enum State {
         Roaming
     }
@@ -11,14 +13,14 @@ public class EnemyIA : MonoBehaviour {
 
     private void Awake() {
         enemyPathfinding = GetComponent<EnemyPathfinding>();
-        state =State.Roaming;
+        state = State.Roaming;
     }
 
     private IEnumerator RoamingRoutine() {
         while (state == State.Roaming) {
             Vector2 roamPosition = GetRoamingPosition();
             enemyPathfinding.MoveTo(roamPosition);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(roamChangeDirFloat);
         }
     }
 

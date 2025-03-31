@@ -13,8 +13,9 @@ public class PlayerController : MonoBehaviour {
     private Animator myAnimator;
     private SpriteRenderer mySpriteRender;
     private bool facingLeft = false;
-    public bool FacingLeft { get { return facingLeft; } set { facingLeft = value; }}
+    public bool FacingLeft { get { return facingLeft; }}
     private bool isDashing = false;
+    private float startingMoveSpeed;
     
     private void Awake() {
         Instance = this;
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Start() {
         playerControls.Combat.Dash.performed += _ => Dash();
+        startingMoveSpeed = moveSpeed;
     }
 
     private void OnEnable() {
@@ -60,10 +62,10 @@ public class PlayerController : MonoBehaviour {
 
         if (mousePos.x < playerScreenPoint.x) {
             mySpriteRender.flipX = true;
-            FacingLeft = true;
+            facingLeft = true;
         } else {
             mySpriteRender.flipX = false;
-            FacingLeft = false;
+            facingLeft = false;
         }
     }
 
@@ -80,7 +82,7 @@ public class PlayerController : MonoBehaviour {
         float dashTime = 0.2f;
         float dashCD = 0.35f;
         yield return new WaitForSeconds(dashTime);
-        moveSpeed /= dashSpeed;
+        moveSpeed = startingMoveSpeed;
         myTrailRenderer.emitting = false;
         yield return new WaitForSeconds(dashCD);
         isDashing = false;
