@@ -2,8 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour {
-    public static PlayerController Instance;
+public class PlayerController : Singleton<PlayerController> {
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float dashSpeed = 4f;
     [SerializeField] private TrailRenderer myTrailRenderer;
@@ -17,8 +16,8 @@ public class PlayerController : MonoBehaviour {
     private bool isDashing = false;
     private float startingMoveSpeed;
     
-    private void Awake() {
-        Instance = this;
+    protected override void Awake() {
+        base.Awake();
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
