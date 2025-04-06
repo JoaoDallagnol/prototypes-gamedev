@@ -2826,7 +2826,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1d784c1f9601f7e48832288d4592a0d6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22122,6 +22122,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaExit
       objectReference: {fileID: 0}
+    - target: {fileID: 7148825218844524244, guid: 326224b1c292d1b42b05789c1a842a21, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ece075952d1a1ed4399d9fb2394c3730, type: 2}
     - target: {fileID: 7838350276286676250, guid: 326224b1c292d1b42b05789c1a842a21, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.18
@@ -22165,6 +22169,10 @@ PrefabInstance:
     - target: {fileID: 7948978830345015315, guid: 326224b1c292d1b42b05789c1a842a21, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8105058333139472417, guid: 326224b1c292d1b42b05789c1a842a21, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
