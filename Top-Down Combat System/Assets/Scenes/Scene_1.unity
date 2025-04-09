@@ -2955,7 +2955,7 @@ Transform:
   m_GameObject: {fileID: 513308991}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.74, y: 0.27, z: 0}
+  m_LocalPosition: {x: 0.474, y: -0.005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19097,6 +19097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729832455}
   - component: {fileID: 1729832456}
+  - component: {fileID: 1729832457}
   m_Layer: 0
   m_Name: ActiveWeapon
   m_TagString: Untagged
@@ -19113,7 +19114,7 @@ Transform:
   m_GameObject: {fileID: 1729832454}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.229, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19130,6 +19131,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ec1026eddbd8824096af6eedf66c02a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1729832457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729832454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa102e96233a6841b0c0e14480f5f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1734853457
