@@ -4,7 +4,7 @@ using UnityEngine;
 public class Sword : MonoBehaviour, IWeapon {
     [SerializeField] private Transform slashAnimSpawnPoint;
     [SerializeField] private GameObject slashAnim;
-    [SerializeField] private float swordAttackCD= 0.5f;
+    // [SerializeField] private float swordAttackCD= 0.5f;
     [SerializeField] private WeaponInfo weaponInfo;
     
     private Transform weaponCollider;
