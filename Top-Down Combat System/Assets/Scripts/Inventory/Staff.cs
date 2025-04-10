@@ -2,11 +2,17 @@ using UnityEngine;
 
 public class Staff : MonoBehaviour, IWeapon {
 
+    [SerializeField] private WeaponInfo weaponInfo;
+
     private void Update() {
         MouseFollowWithOffSet();
     }
     public void Attack() {
-        ActiveWeapon.Instance.ToggleIsAttacking(false);
+        Debug.Log("STAFF ATTACK!");
+    }
+
+    public WeaponInfo GetWeaponInfo() {
+        return weaponInfo;
     }
 
     private void MouseFollowWithOffSet() {

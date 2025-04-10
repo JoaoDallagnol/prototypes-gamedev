@@ -1,7 +1,13 @@
 using UnityEngine;
 
 public class Bow : MonoBehaviour, IWeapon {
+
+    [SerializeField] private WeaponInfo weaponInfo;
     public void Attack() {
-        ActiveWeapon.Instance.ToggleIsAttacking(false);
+        Debug.Log("BOW ATTACK!");
+    }
+
+    public WeaponInfo GetWeaponInfo() {
+        return weaponInfo;
     }
 }
