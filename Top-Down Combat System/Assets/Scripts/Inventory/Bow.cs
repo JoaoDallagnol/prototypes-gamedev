@@ -17,6 +17,7 @@ public class Bow : MonoBehaviour, IWeapon {
         // IMPROVE PERFORMANCE USING READONLY
         myAnimator.SetTrigger(FIRE_HASH);
         GameObject newArrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, ActiveWeapon.Instance.transform.rotation);
+        newArrow.GetComponent<Projectile>().UpdateWeaponInfo(weaponInfo);
     }
 
     public WeaponInfo GetWeaponInfo() {
