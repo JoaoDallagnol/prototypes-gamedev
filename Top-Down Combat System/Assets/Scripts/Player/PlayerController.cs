@@ -12,6 +12,7 @@ public class PlayerController : Singleton<PlayerController> {
     private Rigidbody2D rb;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRender;
+    private Knockback knockback;
     private bool facingLeft = false;
     public bool FacingLeft { get { return facingLeft; }}
     private bool isDashing = false;
@@ -23,6 +24,7 @@ public class PlayerController : Singleton<PlayerController> {
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         mySpriteRender = GetComponent<SpriteRenderer>();
+        knockback = GetComponent<Knockback>();
     }
 
     private void Start() {
@@ -56,6 +58,8 @@ public class PlayerController : Singleton<PlayerController> {
     }
 
     private void Move() {
+        if (knockback.GettingKnockedBack) { return; }
+        
         // Como estamos utilizando o fixedUpdate, então o fixedDeltaTime é mais performatico
         rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
     }
