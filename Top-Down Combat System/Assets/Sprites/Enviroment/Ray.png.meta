@@ -110,45 +110,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hero_Idle_0
+      name: Ray_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 29
-        width: 16
-        height: 17
+        x: 0
+        y: 0
+        width: 208
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 08df26f7d18f121f0800000000000000
-      internalID: -1071302430762533504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Idle_1
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 29
-        width: 16
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8ee6b80983d949500800000000000000
-      internalID: 402119133011603176
+      spriteID: 3f79024726982754e94ba2ebe821e708
+      internalID: 1396403309
       vertices: []
       indices: 
       edges: []
@@ -157,7 +135,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e69a72e6964a19046aed58c0f2d40913
     internalID: 0
     vertices: []
     indices: 
@@ -169,6 +147,7 @@ TextureImporter:
     nameFileIdTable:
       Hero_Idle_0: -1071302430762533504
       Hero_Idle_1: 402119133011603176
+      Ray_0: 1396403309
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

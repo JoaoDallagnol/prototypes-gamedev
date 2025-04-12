@@ -18700,6 +18700,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6253698879418594539, guid: e12c6bd15daf9b442835e52c11435081, type: 3}
+      propertyPath: whiteFlashMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c0e0d083176e3e419ae1287a3e5b203, type: 2}
     - target: {fileID: 6381608938639773908, guid: e12c6bd15daf9b442835e52c11435081, type: 3}
       propertyPath: m_Name
       value: Player
@@ -18745,7 +18749,39 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8273930401527700258, guid: e12c6bd15daf9b442835e52c11435081, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273930401527700258, guid: e12c6bd15daf9b442835e52c11435081, type: 3}
+      propertyPath: m_Size.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273930401527700258, guid: e12c6bd15daf9b442835e52c11435081, type: 3}
+      propertyPath: m_Size.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273930401527700258, guid: e12c6bd15daf9b442835e52c11435081, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1071302430762533504, guid: fe576e1d57004c44490fa7f6c222f102, type: 3}
+    - target: {fileID: 8273930401527700258, guid: e12c6bd15daf9b442835e52c11435081, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273930401527700258, guid: e12c6bd15daf9b442835e52c11435081, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273930401527700258, guid: e12c6bd15daf9b442835e52c11435081, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273930401527700258, guid: e12c6bd15daf9b442835e52c11435081, type: 3}
       propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273930401527700258, guid: e12c6bd15daf9b442835e52c11435081, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -18964,6 +19000,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7374549978158909047, guid: 0c7a05f49a888b742b9e32d65e660a68, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f6d766acb0f9664fa4decff8471e0fc, type: 2}
     - target: {fileID: 8137338670295769056, guid: 0c7a05f49a888b742b9e32d65e660a68, type: 3}
       propertyPath: moveSpeed
       value: 8
