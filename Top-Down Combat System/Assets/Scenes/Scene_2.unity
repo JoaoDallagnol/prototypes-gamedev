@@ -2315,11 +2315,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 8412471126261699930, guid: 0c7a05f49a888b742b9e32d65e660a68, type: 3}
-  bulletMoveSpeed: 0
-  burstCount: 0
-  timeBetweenBurts: 0
+  bulletMoveSpeed: 0.1
+  burstCount: 1
+  timeBetweenBurts: 0.1
   restTime: 1
-  projectilePerBurst: 0
+  projectilePerBurst: 1
   angleSpread: 0
   startingDistance: 0.1
   stagger: 0
@@ -18991,7 +18991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5914081884548838807, guid: 0854a820f784ea04d92a76b195179b78, type: 3}
       propertyPath: stagger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5914081884548838807, guid: 0854a820f784ea04d92a76b195179b78, type: 3}
       propertyPath: restTime
@@ -18999,7 +18999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5914081884548838807, guid: 0854a820f784ea04d92a76b195179b78, type: 3}
       propertyPath: oscillate
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5914081884548838807, guid: 0854a820f784ea04d92a76b195179b78, type: 3}
       propertyPath: burstCount
