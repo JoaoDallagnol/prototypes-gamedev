@@ -10,6 +10,9 @@ public class Shooter : MonoBehaviour, IEnemy {
     [SerializeField] private float projectilePerBurst;
     [SerializeField][Range(0, 359)] private float angleSpread;
     [SerializeField] private float startingDistance = 0.1f;
+    [SerializeField] private bool stagger;
+    [SerializeField] private bool oscillate;
+
 
     private bool isShooting = false;
 
@@ -23,14 +26,28 @@ public class Shooter : MonoBehaviour, IEnemy {
     {
         isShooting = true;
 
-        float startAngle, currentAngle, angleStep;
-        TargetCloneOfInfluence(out startAngle, out currentAngle, out angleStep);
+        float startAngle, currentAngle, angleStep, endAngle;
+        float timeBetweenProjectiles = 0f;
 
-        for (int i = 0; i < burstCount; i++)
-        {
+        TargetCloneOfInfluence(out startAngle, out currentAngle, out angleStep, out endAngle);
+        if (stagger) { timeBetweenProjectiles = timeBetweenBurts / projectilePerBurst; }
 
-            for (int j = 0; j < projectilePerBurst; j++)
-            {
+        for (int i = 0; i < burstCount; i++) {
+
+            if (!oscillate) {
+                TargetCloneOfInfluence(out startAngle, out currentAngle, out angleStep, out endAngle);
+            } 
+            
+            if (oscillate && i % 2 != 1) {
+                TargetCloneOfInfluence(out startAngle, out currentAngle, out angleStep, out endAngle);
+            } else if (oscillate) {
+                currentAngle = endAngle;
+                endAngle = startAngle;
+                startAngle = currentAngle;
+                angleStep *= -1;
+            }
+
+            for (int j = 0; j < projectilePerBurst; j++) {
                 Vector2 pos = FindBulletSpawnPos(currentAngle);
                 GameObject newBullet = Instantiate(bulletPrefab, pos, Quaternion.identity);
                 newBullet.transform.right = newBullet.transform.position - transform.position;
@@ -41,22 +58,23 @@ public class Shooter : MonoBehaviour, IEnemy {
                 }
 
                 currentAngle += angleStep;
+                if (stagger) {yield return new WaitForSeconds(timeBetweenProjectiles);}
             }
 
             currentAngle = startAngle;
-            yield return new WaitForSeconds(timeBetweenBurts);
-            TargetCloneOfInfluence(out startAngle, out currentAngle, out angleStep);
+
+            if (!stagger) { yield return new WaitForSeconds(timeBetweenBurts);}
         }
 
         yield return new WaitForSeconds(restTime);
         isShooting = false;
     }
 
-    private void TargetCloneOfInfluence(out float startAngle, out float currentAngle, out float angleStep) {
+    private void TargetCloneOfInfluence(out float startAngle, out float currentAngle, out float angleStep, out float endAngle) {
         Vector2 targetDirection = PlayerController.Instance.transform.position - transform.position;
         float targetAngle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
         startAngle = targetAngle;
-        float endAngle = targetAngle;
+        endAngle = targetAngle;
         currentAngle = targetAngle;
         float halfAngleSpread = 0f;
         angleStep = 0;

@@ -2322,6 +2322,8 @@ MonoBehaviour:
   projectilePerBurst: 0
   angleSpread: 0
   startingDistance: 0.1
+  stagger: 0
+  oscillate: 0
 --- !u!1001 &467699037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18988,28 +18990,40 @@ PrefabInstance:
       value: Ghost
       objectReference: {fileID: 0}
     - target: {fileID: 5914081884548838807, guid: 0854a820f784ea04d92a76b195179b78, type: 3}
+      propertyPath: stagger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914081884548838807, guid: 0854a820f784ea04d92a76b195179b78, type: 3}
       propertyPath: restTime
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5914081884548838807, guid: 0854a820f784ea04d92a76b195179b78, type: 3}
+      propertyPath: oscillate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914081884548838807, guid: 0854a820f784ea04d92a76b195179b78, type: 3}
       propertyPath: burstCount
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5914081884548838807, guid: 0854a820f784ea04d92a76b195179b78, type: 3}
       propertyPath: angleSpread
-      value: 40
+      value: 97
       objectReference: {fileID: 0}
     - target: {fileID: 5914081884548838807, guid: 0854a820f784ea04d92a76b195179b78, type: 3}
       propertyPath: bulletMoveSpeed
-      value: 6
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914081884548838807, guid: 0854a820f784ea04d92a76b195179b78, type: 3}
+      propertyPath: startingDistance
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5914081884548838807, guid: 0854a820f784ea04d92a76b195179b78, type: 3}
       propertyPath: timeBetweenBurts
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5914081884548838807, guid: 0854a820f784ea04d92a76b195179b78, type: 3}
       propertyPath: projectilePerBurst
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
